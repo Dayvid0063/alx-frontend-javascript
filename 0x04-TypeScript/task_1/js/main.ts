@@ -7,13 +7,18 @@ interface Teacher {
     [key: string]: any;
 }
 
-// Usage
-const teacher3: Teacher = {
+// Directors interface that extends Teacher
+interface Directors extends Teacher {
+    numberOfReports: number;
+}
+
+// An object of type Directors
+const director1: Directors = {
     firstName: 'Ruben',
-    fullTimeEmployee: false,
     lastName: 'Amorim',
     location: 'Manchester',
-    contract: false,
+    fullTimeEmployee: true,
+    numberOfReports: 17,
 };
 
-console.log(teacher3);
+console.log(director1);
